@@ -30,7 +30,17 @@ public class Controller {
                 "validar numero hexadecimal",
                 "validar operacion de un digito",
                 "validar numero de control ITSNCG",
-                "validar curp"
+                "validar curp",
+
+                "validar cantidad de pesos",
+                "validar tarjeta de credito",
+                "validar HTML",
+                "validar color hexadecimal",
+                "validar link",
+                "validar query insert",
+                "validar sentencia if",
+                "validar frase con salto de linea",
+                "validar url de youtube"
                 );
     }
 
@@ -64,7 +74,15 @@ public class Controller {
             case 11:{expresion="(^[0-9]{1,1})([+|-|*|/]+)([0-9]{1,1}$)";break;}
             case 12:{expresion="(^[0-9]{2,2})([cg]{2,2})([0-9]{4,4}$)";break;}
             case 13:{expresion="^([A-Z][AEIOUX][A-Z]{2}\\d{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[12]\\d|3[01])[HM](?:AS|B[CS]|C[CLMSH]|D[FG]|G[TR]|HG|JC|M[CNS]|N[ETL]|OC|PL|Q[TR]|S[PLR]|T[CSL]|VZ|YN|ZS)[B-DF-HJ-NP-TV-Z]{3}[A-Z\\d])(\\d)$";break;}
-
+            case 14:{expresion="(^[$])([0-9].+[mxn]$)"; break;}
+            case 15:{expresion="([0-9]{16})"; break;}
+            case 16:{expresion="(^[\\<][p][ ][class]+[=])([a-zA-Z \\\"]+[>])([a-zA-Z ]+)([</p>]+$)"; break;}
+            case 17:{expresion="(^[#]{1})([0-9a-fA-F]{6}$)"; break;}
+            case 18:{expresion="(^htt([p|ps]{1,2})://www.)([a-zA-Z]+[\\.])([com|mx|org|gob]{2,3}$)"; break;}
+            case 19:{expresion="(^insert into ([a-zA-Z0-9_]+)(\\(([a-zA-Z0-9,]+)\\)) values\\(([a-zA-Z0-9,]+)\\))"; break;}
+            case 20:{expresion="(^if \\(([a-zA-Z0-9]+) == ([a-zA-Z0-9\\\"]+)\\))"; break;}
+            case 21:{expresion="(^[a-zA-Z0-9\\n]+$)"; break;}
+            case 22:{expresion="htt([p|ps]{1,2})://www.youtube.com/watch\\?v=([a-zA-Z0-9]{11})"; break;}
         }
         String texto=entrada.getText();
         Pattern patron=Pattern.compile(expresion);
